@@ -1,26 +1,28 @@
 package com.elainevalles.getafe.ifct0062_2025_testws.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-public class movie {
+@Entity
+public class Movie {
     @Id
-    private Long id;
+    private Integer id;
     private String title;
     private String genre;
     private String url;
     private int year;
 
-    public movie() {
+    public Movie() {
     }
 
-    public movie(String title, String genre, String url, int year) {
+    public Movie(String title, String genre, String url, int year) {
         this.title = title;
         this.genre = genre;
         this.url = url;
         this.year = year;
     }
 
-    public movie(Long id, String title, String genre, String url, int year) {
+    public Movie(Integer id, String title, String genre, String url, int year) {
         this.id = id;
         this.title = title;
         this.genre = genre;
@@ -28,11 +30,11 @@ public class movie {
         this.year = year;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
